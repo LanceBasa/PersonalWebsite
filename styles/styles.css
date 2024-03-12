@@ -34,9 +34,12 @@ background-color: aquamarine;
     border: solid 1px rgb(30, 28, 28);
     height: 80vh;
     width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font: 10px bold;
 }
+
+.me > * {
+    position: relative;
+    margin: 10vh 0;
+    text-align: center;
+}
+
