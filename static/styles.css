@@ -1,14 +1,14 @@
 .navdiv{
-position: -webkit-sticky;
-position: sticky;
-top:10vh;
-right: 10px;
-width: 5%;
-height: 100%;
-text-align: right;
-float: right;
-border: solid 1px red;
-background-color: aquamarine;
+    position: sticky;
+    top:10vh;
+    right: 10px;
+    width: 5%;
+    height: 100%;
+    text-align: right;
+    float: right;
+    border: solid 1px red;
+    background-color: aquamarine;
+    z-index: 100;
 } 
 
 

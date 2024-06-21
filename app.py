@@ -12,7 +12,10 @@ def home():
     return render_template('home.html')
 
 
-
-@app.route("/p1")
+@app.route("/page1")
 def page1():
     return render_template('page1.html')
+
+@app.route("/page2")
+def page2():
+    return render_template('./pastproj/page2.html')
