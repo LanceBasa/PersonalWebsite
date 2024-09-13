@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<header>
+    {{ page.header }}
+    {% include nav.html %}
+</header>
+
+<main>
+{% for i in (1..10) %}
+    {% capture body_key %}body{{ i }}{% endcapture %}
+    {{ page[body_key] }}
+{% endfor %}
+
+</main>
+
+{{ page.footer}}
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
