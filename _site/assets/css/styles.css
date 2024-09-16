@@ -4,29 +4,62 @@
   /* width: auto; */
   /* margin: auto; */
   display: inline-block;
+  font-size: 2vh;
 }
 
 .typing {
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 1s steps(100, end)  ;
+  animation: typing 6s steps(150, end);
+
 }
 
 #line2 {
   white-space: nowrap;
   overflow: hidden;
-  border-right: .15em solid orange; /* The typewriter cursor */
   opacity: 0;
-  animation: typing 1s steps(100, end) 2s forwards, fade-in 0s 2.2s forwards, blink-caret .75s step-end 5;
+  animation: typing 6s steps(150, end) 2s forwards, fade-in 0s 2s forwards;
   text-indent: 40px;
 }
 
-#info {
+#line3 {
   white-space: nowrap;
   overflow: hidden;
-  opacity: 0; /* Start hidden */
-  animation: fade-in 0s 4s forwards;
+  opacity: 0;
+  animation: typing 6s steps(150, end) 4s forwards, fade-in 0s 4s forwards;
+  text-indent: 40px;
 }
+#line4 {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: typing 6s steps(150, end) 6s forwards, fade-in 0s 6s forwards;
+  text-indent: 40px;
+}
+#line5 {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: typing 6s steps(150, end) 9s forwards, fade-in 0s 9s forwards;
+  text-indent: 40px;
+}
+
+#line6 {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: typing 6s steps(150, end) 11s forwards, fade-in 0s 11s forwards;
+  text-indent: 40px;
+}
+#line7 {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: typing 6s steps(150, end) 13s forwards, fade-in 0s 13s forwards;
+  text-indent: 40px;
+}
+
+
 
 
 /* Animation to reveal the text */
@@ -45,3 +78,80 @@
   to { opacity: 1; }
 }
 
+
+
+#welcome-title {
+
+  font-size: 9vw;
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  border: solid 1px orange;
+  width: 100vw;
+  white-space: nowrap; /* Prevent the text from wrapping to a new line */
+  animation: moveAcross 5s linear infinite; /* Infinite horizontal movement */
+
+}
+
+body {
+
+  overflow-x: hidden;
+}
+
+@keyframes moveAcross {
+  0% {
+    transform: translateX(-100vw); /* Start outside the right side of the viewport */
+  }
+  100% {
+    transform: translateX(100vw); /* Move across and exit from the left side */
+  }
+}
+
+
+
+
+
+
+.animate-left {
+  opacity: 0;
+  transition: opacity 1s, transform 2s;
+  transform: translateX(-50%);
+}
+  
+.animate-right {
+  opacity: 0;
+  transition: opacity 1s, transform 2s;
+  transform: translateX(50%);
+}
+
+.animate-up {
+  opacity: 0;
+  transition: opacity 1s, transform 2s;
+  transform: translateY(50%);
+}
+
+
+  
+.animateDiv.in-view .animate-left,
+.animateDiv.in-view .animate-right,
+.animateDiv.in-view .animate-up {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+html{
+  scroll-behavior: smooth;
+} 
+
+.animateDiv{
+  display: inline-block;
+  background: rgba(245, 245, 220, 0.7);
+  border: solid 1px black;
+
+}
+
+.test{
+  height: 500px;
+  border: solid 1px orange;
+  width: 50vw;
+}

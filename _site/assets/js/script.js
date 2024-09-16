@@ -1,13 +1,23 @@
-// // script.js
-// document.addEventListener("DOMContentLoaded", () => {
-//     const line1 = document.querySelector('.line1');
-//     const line2 = document.querySelector('.line2');
-  
-//     // Duration of the first line typing animation in milliseconds
-//     const line1Duration = 5000; // Adjust according to the animation duration set in CSS
-  
-//     setTimeout(() => {
-//       line2.style.animation = 'typing 5s steps(40, end) forwards, blink-caret .75s step-end infinite';
-//     }, line1Duration); // Delay the start of the second line's animation
-//   });
-  
+window.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', handleScroll);
+});
+
+function handleScroll() {
+    var scrollPos = window.scrollY;
+    var windowHeight = window.innerHeight;
+
+    var animateDiv = document.querySelector('.animateDiv');
+    var advice = document.querySelector('.advice');
+
+    // Check if the features element exists before accessing its offsetTop
+    if (animateDiv) {
+        var animatePos = animateDiv.offsetTop;
+        if (scrollPos > (animatePos - windowHeight / 3)) {
+            animateDiv.classList.add('in-view');
+        }
+    } else {
+        console.warn('No element with class .features found.');
+    }
+
+
+}
